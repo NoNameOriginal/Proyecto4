@@ -25,8 +25,8 @@
  Asegurarse de tener la variable JAVA_HOME configurada
     
  ## Otra opcion
- descargar e instalar desde la pagina de descarga de apache spark 
- https://spark.apache.org/downloads.html
+ Descargar e instalar desde la pagina de descarga de apache spark 
+ [Spark]https://spark.apache.org/downloads.html
 
 
 # Definiciones necesarias
@@ -36,13 +36,13 @@
  y que tan relevante es una palabra en un texto.
 
  K means:
- este es un metodo de agrupamiento de datos en el que se utiliza centroides para agrupar k grupos cercanos y asi tener el agrupamiento por cercania de datos.
+ Este es un metodo de agrupamiento de datos en el que se utiliza centroides para agrupar k grupos cercanos y asi tener el agrupamiento por cercania de datos.
 
 
  ## Explicacion algoritmo
  1. Primero tenemos la verificacion de parametros , la cual solo se asegura que el usuario entregue la carpeta de salida y el K(numero de conjuntos en el que quiere que se separen los archivos)
 
- 2. luego de esto observamos la obtension de los archivos o documentos 
+ 2. Luego de esto observamos la obtension de los archivos o documentos 
         documentos = sc.wholeTextFiles(dirs)
     sus nombres en nombredocumentos  
         nombresDocumentos=documentos.Keys().collect()
