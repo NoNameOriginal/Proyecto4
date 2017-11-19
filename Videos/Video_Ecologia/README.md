@@ -18,7 +18,12 @@
 
  
  ## Python 
- SE hace con pip install pyspark
+ Se Ejecuta el siguiente comando:
+ ```
+    pip install pyspark
+ ```
+ Asegurarse de tener la variable JAVA_HOME configurada
+    
  ## Otra opcion
  descargar e instalar desde la pagina de descarga de apache spark 
  https://spark.apache.org/downloads.html
