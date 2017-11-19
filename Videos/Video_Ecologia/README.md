@@ -6,7 +6,7 @@
 ## 2017-2
 
 
-#Proyecto 4
+# Proyecto 4
 
 
     Geralin Stefania Fernandez Bedoya      codigo: 201510033010
@@ -14,17 +14,17 @@
 
 
 
-##Instalacion:
+## Instalacion:
 
  
- #python 
+ # Python 
  SE hace con pip install pyspark
- #Otra opcion
+ # Otra opcion
  descargar e instalar desde la pagina de descarga de apache spark 
  https://spark.apache.org/downloads.html
 
 
-## definiciones necesarias
+## Definiciones necesarias
 
  TF-IDF:
  tf idf es  una medida de frecuencia en un texto o coleccion de palabras en la que se puede determinar la frecuencia de una palabra en este, determinando asi que palabras son mas frecuentes 
@@ -63,7 +63,7 @@
     la paralelizacion que se observa a el final es para obtener los itms del diccionario y meterlos en un vectos(RDD)
 
 
-## comando ejecucion
+## Comando ejecucion
     spark-submit --master yarn --deploy-mode cluster proyectoSpark.py 2 salidaArgv9
  
     proyectoSpark.py es el archivo en el que esta el algoritmo 
