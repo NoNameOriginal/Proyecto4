@@ -47,9 +47,9 @@
         documentos = sc.wholeTextFiles(dirs)
 ```
     sus nombres en nombredocumentos
-    ```
+```
         nombresDocumentos=documentos.Keys().collect()
-     ```
+```
     para asi luego obtener el vector docs que es un vector con el contenido de los archivos
     ```
         docs=documetos.values().map(lambda doc: doc.split(" "))
