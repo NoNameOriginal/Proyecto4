@@ -91,4 +91,4 @@ la paralelizacion que se observa a el final es para obtener los itms del diccion
  ```
  spark-submit --master yarn --deploy-mode cluster proyectoSpark.py 
  ```
-    proyectoSpark.py es el archivo en el que esta el algoritmo 
+ proyectoSpark.py es el archivo en el que esta el algoritmo 
