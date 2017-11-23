@@ -39,6 +39,8 @@
  Este es un metodo de agrupamiento de datos en el que se utiliza centroides para agrupar k grupos cercanos y asi tener el agrupamiento por cercania de datos.
 
 
+ ## Datasets
+ Los archivos que se quieran analizar deben estar en la carpeta
  ## Explicacion algoritmo
  1. Primero tenemos asignacion de variables donde guardamos la dirección del datasets, k y el maximo de iteraciones
 
