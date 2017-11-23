@@ -41,6 +41,8 @@
 
  ## Datasets
  Los archivos que se quieran analizar deben estar en la carpeta
+    hdfs:///user/clondo46/datasets/gutenberg
+ Y se guardaran en la carpeta de salida que se elija
  ## Explicacion algoritmo
  1. Primero tenemos asignacion de variables donde guardamos la dirección del datasets, k y el maximo de iteraciones
 
