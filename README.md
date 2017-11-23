@@ -43,44 +43,44 @@
  1. Primero tenemos asignacion de variables donde guardamos la dirección del datasets, k y el maximo de iteraciones
 
  2. Luego de esto observamos la obtension de los archivos o documentos 
- ```
+```
         documentos = sc.wholeTextFiles(dirs)
 ```
-    sus nombres en nombredocumentos
+sus nombres en nombredocumentos
 ```
         nombresDocumentos=documentos.Keys().collect()
 ```
-    para asi luego obtener el vector docs que es un vector con el contenido de los archivos
-    ```
+para asi luego obtener el vector docs que es un vector con el contenido de los archivos
+```
         docs=documetos.values().map(lambda doc: doc.split(" "))
 ```
 
  3. esta parte es el manejo de TF-IDF  en el que el tf esta hayara la frecuencia de los terminos en el documento
  ```
         tf=hashingTF.transform(docs)
-        ```
-    luego el idf encontrara la relevancia de una palabra en los documentos
-    ```
+ ```
+ luego el idf encontrara la relevancia de una palabra en los documentos
+ ```
         idf=IDF().fit(tf)
-        ```
-    para terminar con esta parte esta el tfidf que es un RDD el cual es como una especie de vector con el resultado de lo anterios, que utilizaremos para luego hayar las "distancias" entre archivos
-    ```
+ ```
+para terminar con esta parte esta el tfidf que es un RDD el cual es como una especie de vector con el resultado de lo anterios, que utilizaremos para luego hayar las "distancias" entre archivos
+```
         tfidf=idf.transform(tf)
 ```
  4. por ultimo en esta parte se hace la implementacion del k means 
  ```
         clusters=KMeans.train(tfidf,k,maxIterations=maxIter)
-        ```
-    tenemos luego la ubicacion de los archivos en el cluster con el clousterid
-    ```
+```
+tenemos luego la ubicacion de los archivos en el cluster con el clousterid
+```
         clousterid=clusters.predict(tfidf).collect()
-        ```
+```
     
-    luego de esto tenemos el diccionario que relaciona el nombre del archivo con el cluster correspondiente
-    ```
+luego de esto tenemos el diccionario que relaciona el nombre del archivo con el cluster correspondiente
+```
         diccionario=dict(zip(nombreDocumentos , clusterid))
 ```
-    la paralelizacion que se observa a el final es para obtener los itms del diccionario y meterlos en un vectos(RDD)
+la paralelizacion que se observa a el final es para obtener los itms del diccionario y meterlos en un vectos(RDD)
 
 
 # Comando ejecucion
