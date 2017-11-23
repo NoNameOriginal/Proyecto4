@@ -9,7 +9,7 @@ if __name__ == "__main__":
     k = 5    
     maxIters = 20
     sc = SparkContext(appName="Proyecto04") 
-    #Leemos tfidf
+    #Leemos 
     documentos = sc.wholeTextFiles(dirs) 
     nombreDocumentos = documentos.keys().collect() 
     docs = documentos.values().map(lambda doc: doc.split(" "))
